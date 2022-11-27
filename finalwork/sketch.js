@@ -20,7 +20,7 @@ function setup(){
   strokeWeight(1.6);
   noFill();
   pixelDensity(2);
-  background(RGB,0,0,0);
+  background(0,0,0,0);
 }
 function windowResized(){ 
 resizeCanvas(windowWidth, windowHeight); 
