@@ -1,5 +1,4 @@
-// 最終課題を制作しよう
-let r = 220;
+let r = 200;
 
 let n1 = 0;
 let n2 = 0;
@@ -15,19 +14,21 @@ let B  = 50;
 
 function setup(){
   
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(windowWidth, windowHeight,WEBGL);
   angleMode(DEGREES);
   colorMode(HSB, 360, 100, 100, 100);
   strokeWeight(1.6);
   noFill();
   pixelDensity(2);
 }
+function windowResized(){ 
+resizeCanvas(windowWidth, windowHeight); 
+}
 
 function draw(){
-  background(0,0,0);
+  background(0);
  clear()
 
-  rotateX(X);
   rotateY(Y);
   rotateZ(Z);
   
@@ -79,6 +80,7 @@ n2 = 20;
   
 if(keyIsDown(" ".charCodeAt(0))){ X += 1; }
 else{ X = 0;}
+rotateX(X);
 }
 
 
