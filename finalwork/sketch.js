@@ -10,7 +10,7 @@ let Z = -30;
 let h = 270;
 let H = 270;
 let S = 100;
-let B  = 100;
+let B  = 50;
 
 function setup(){
   
@@ -20,7 +20,7 @@ function setup(){
   strokeWeight(1.6);
   noFill();
   pixelDensity(2);
-  background(0,0,0,0);
+ 
 }
 function windowResized(){ 
 resizeCanvas(windowWidth, windowHeight); 
@@ -29,6 +29,8 @@ resizeCanvas(windowWidth, windowHeight);
 function draw(){
 
  clear()
+ background(0,0,0);
+  rotateX(X);
   rotateY(Y);
   rotateZ(Z);
   
@@ -44,13 +46,14 @@ if(n1 < 1){
 n1 += 0.005;
 h -= 0.1;
 S -= 0.1;
-B -= 0.1;
+B += 0.1;
   }
   
 else if(n1 < 19.5){
 n1 += 0.02;
 h -= 1;
-
+S -= 0.1;
+B = 80;
 }
 
   
@@ -75,13 +78,11 @@ else if(n2 < 20){
 n2 += 0.001;}
 else{
 n2 = 20;
-S = 0;
-B = 0;
 }
   
 if(keyIsDown(" ".charCodeAt(0))){ X += 1; }
 else{ X = 0;}
-rotateX(X);
+
 }
 
 
