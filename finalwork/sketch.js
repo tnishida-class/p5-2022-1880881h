@@ -15,7 +15,7 @@ let B  = 50;
 
 function setup(){
   
-  createCanvas(600, 600, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
   angleMode(DEGREES);
   colorMode(HSB, 360, 100, 100, 100);
   strokeWeight(1.6);
