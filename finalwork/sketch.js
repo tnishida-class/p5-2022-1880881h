@@ -18,14 +18,13 @@ function setup(){
   createCanvas(600, 600, WEBGL);
   angleMode(DEGREES);
   colorMode(HSB, 360, 100, 100, 100);
-background(0,0,0);
   strokeWeight(1.6);
   noFill();
   pixelDensity(2);
 }
 
 function draw(){
-  
+  background(0,0,0);
  clear()
 
   rotateX(X);
