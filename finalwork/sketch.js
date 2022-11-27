@@ -26,7 +26,7 @@ resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw(){
-  background(0);
+ background(230, 50, 15);
  clear()
 
   rotateY(Y);
