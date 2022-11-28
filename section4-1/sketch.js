@@ -75,6 +75,8 @@ line(0, height - a, width, height - a);
     stroke(0,255,0);}
   
  const a = height * average / 100; 
+  noStroke();
+  fill(0);
   text(average.toPrecision(3), 1 , height - a);
   
   
