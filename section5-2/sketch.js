@@ -1,12 +1,17 @@
-// テキスト「関数を作る(1) 引数のある関数」
-// 練習問題：星を描く関数を改造して正N角形を描画する関数を作ってみよう
+// 正N角形代入
+let N = 8;
+// 正N角形代入
+
 function setup(){
-  createCanvas(300, 100);
+  createCanvas(400, 100);
   background(200);
   fill(0);
   crossmark(10, 10, 90, 90);
   ngmark(150, 50, 80);
   star(250, 50, 40);
+  
+  translate(width * 0.87, height / 2);
+  regularPolygon(0, 0, 40, N);
 }
 
 function crossmark(x1, y1, x2, y2){
@@ -31,6 +36,18 @@ function star(cx, cy, r){
     let x = cx + cos(theta) * r;
     let y = cy + sin(theta) * r;
     vertex(x,y);
+  }
+  endShape(CLOSE);
+}
+function regularPolygon(cx, cy, r, npoints) {
+  fill(255,0,0);
+  noStroke();
+  let angle = TWO_PI / npoints;
+  beginShape();
+  for (let a = 0; a < TWO_PI; a += angle) {
+    let x = cx + cos(a) * r;
+    let y = cy + sin(a) * r;
+    vertex(x, y);
   }
   endShape(CLOSE);
 }
